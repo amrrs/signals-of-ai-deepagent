@@ -83,15 +83,9 @@ Keep it tight, evidence-driven, and free of fluff.
 
 def build_spy_agent(model_name: str = DEFAULT_MODEL, api_key: str | None = None):
     """Create the compiled Competitor Spy deep agent."""
-    api_key = (
-        api_key
-        or os.getenv("NEBIUS_TOKEN_FACTORY_API_KEY")
-        or os.getenv("NEBIUS_API_KEY")
-    )
+    api_key = api_key or os.getenv("NEBIUS_TOKEN_FACTORY_API_KEY")
     if not api_key:
-        raise RuntimeError(
-            "Set NEBIUS_TOKEN_FACTORY_API_KEY (or NEBIUS_API_KEY) in your .env"
-        )
+        raise RuntimeError("Set NEBIUS_TOKEN_FACTORY_API_KEY in your .env")
 
     model = ChatNebius(
         model=model_name,

@@ -51,8 +51,6 @@ NEBIUS_TOKEN_FACTORY_API_KEY=your_nebius_token_factory_key
 TAVILY_API_KEY=your_tavily_api_key
 ```
 
-`NEBIUS_API_KEY` is also supported as a fallback, but `NEBIUS_TOKEN_FACTORY_API_KEY` is preferred for this demo.
-
 ## Run Locally
 
 ```bash
@@ -76,8 +74,7 @@ http://127.0.0.1:8000
 
 ## Environment Variables
 
-- `NEBIUS_TOKEN_FACTORY_API_KEY`: Preferred Nebius Token Factory key for model access.
-- `NEBIUS_API_KEY`: Optional fallback Nebius API key.
+- `NEBIUS_TOKEN_FACTORY_API_KEY`: Nebius Token Factory key for model access.
 - `TAVILY_API_KEY`: Required for live web search.
 - `SPY_MODEL`: Optional model override. Defaults to `nvidia/Nemotron-3-Ultra-550b-a55b`.
 
